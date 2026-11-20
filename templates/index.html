@@ -7,8 +7,7 @@
   <meta name="description" content="A little bouquet made with code.">
   <title>A Little Bouquet For You</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="
-  reconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
@@ -41,19 +40,20 @@
       <div class="actions">
         <button id="startBtn" class="primary-btn"> <span>✦</span> Bloom the bouquet</button>
         <button id="replayBtn" class="secondary-btn">↻ Replay</button>
+        <button id="musicBtn" class="secondary-btn" onclick="toggleMusic()">🎵 Play Music</button>
       </div>
       <p class="hint" id="statusText">Tap the button and watch the flowers bloom.</p>
     </section>
     <footer>MADE WITH <span>♥</span> Uwikkkk </footer>
   </main>
+
+  <!-- Pemutar Audio -->
+  <audio id="bgMusic" loop>
+    <source src="/lagu.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung elemen audio.
+  </audio>
+
+  <!-- Script dipanggil PALING BAWAH setelah elemen audio & tombol selesai dimuat -->
   <script src="/script.js"></script>
-<!-- Pemutar Audio -->
-<audio id="bgMusic" loop>
-  <source src="{{ url_for('static', filename='lagu.mp3') }}" type="audio/mpeg">
-  Browser Anda tidak mendukung elemen audio.
-</audio>
-<!-- Tombol Play/Pause (Opsional, tapi sangat disarankan) -->
-<button id="musicBtn" onclick="toggleMusic()">🎵 Putar Musik</button>
-</script>
 </body>
 </html>

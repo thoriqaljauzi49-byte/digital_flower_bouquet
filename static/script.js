@@ -99,3 +99,31 @@ startBtn.addEventListener("click",bloom);
 replayBtn.addEventListener("click",bloom);
 renderInstant();
 setTimeout(bloom,500);
+
+
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+let isPlaying = false;
+
+// Fungsi untuk tombol Play / Pause
+function toggleMusic() {
+  if (isPlaying) {
+    music.pause();
+    musicBtn.innerText = "🎵 Putar Musik";
+    isPlaying = false;
+  } else {
+    music.play();
+    musicBtn.innerText = "⏸️ Jeda Musik";
+    isPlaying = true;
+  }
+}
+
+// Otomatis memutar musik saat pengunjung pertama kali klik di mana saja pada halaman
+document.body.addEventListener("click", function () {
+  if (!isPlaying) {
+    music.play().then(() => {
+      isPlaying = true;
+      if (musicBtn) musicBtn.innerText = "⏸️ Jeda Musik";
+    }).catch(err => console.log("Menunggu interaksi user:", err));
+  }
+}, { once: true });

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090914">
+  <meta name="description" content="A little bouquet made with code.">
+  <title>A Little Bouquet For You</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main class="page">
+    <header class="intro">
+      <div class="eyebrow"><span class="tiny-flower">✿</span> A DIGITAL GIFT <span class="tiny-flower">✿</span></div>
+      <h1>A little bouquet<br><em>just for you.</em></h1>
+      <p class="subtitle">Some flowers never fade — especially the ones made with code.</p>
+    </header>
+
+    <section class="bouquet-card" aria-label="Buket bunga digital">
+      <div class="card-top"><span>FLOWER.exe</span><span class="live-dot"></span></div>
+      <div class="art-stage">
+        <div class="sparkles" aria-hidden="true">
+          <i>✦</i><i>·</i><i>✧</i><i>·</i><i>✦</i><i>✧</i><i>·</i><i>✦</i>
+        </div>
+        <pre id="bouquet" class="bouquet" aria-label="Buket bunga ASCII" aria-live="polite"></pre>
+        <div class="caption">crafted line by line <span>♥</span></div>
+      </div>
+      <div class="card-bottom"><span>PYTHON × PIXELS × FEELING</span><span>01 / 01</span></div>
+    </section>
+
+    <section class="message">
+      <div class="message-icon">✿</div>
+      <p class="message-label">A NOTE FOR YOU</p>
+      <h2 id="personalMessage">For someone who makes ordinary days feel special (ASAAAAA).</h2>
+      <p class="message-sub">A tiny reminder that you deserve beautiful things.</p>
+      <div class="actions">
+        <button id="startBtn" class="primary-btn"> <span>✦</span> Bloom the bouquet</button>
+        <button id="replayBtn" class="secondary-btn">↻ Replay</button>
+      </div>
+      <p class="hint" id="statusText">Tap the button and watch the flowers bloom.</p>
+    </section>
+    <footer>MADE WITH <span>♥</span> Uwikkkk </footer>
+  </main>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
